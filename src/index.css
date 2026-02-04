@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0f172a;
+  --color-secondary: #1e293b;
+  --color-accent: #10b981;
+  --color-text: #f8fafc;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Swiper - Project Card Slider */
+.project-swiper {
+  border-radius: 0.75rem;
+}
+
+.project-swiper .swiper-button-prev,
+.project-swiper .swiper-button-next {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-swiper .swiper-button-prev:hover,
+.project-swiper .swiper-button-next:hover {
+  background: rgba(16, 185, 129, 0.9);
+  transform: scale(1.05);
+}
+
+.project-swiper .swiper-button-prev::after,
+.project-swiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.project-swiper .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.45);
+  opacity: 1;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.project-swiper .swiper-pagination-bullet-active {
+  width: 18px;
+  border-radius: 999px;
+  background: #10b981;
+}
+
+/* Hero Section Gradient Animation */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+@media (max-width: 640px) {
+  .project-swiper .swiper-button-prev,
+  .project-swiper .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .project-swiper .swiper-button-prev::after,
+  .project-swiper .swiper-button-next::after {
+    font-size: 14px;
+  }
+}
