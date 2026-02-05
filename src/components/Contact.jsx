@@ -71,7 +71,7 @@ const Contact = () => {
             <div className="flex flex-row justify-center gap-30 pt-20">
               {[
                 { icon: <Github size={30} />, link: "https://github.com/chathu-02/" },
-                { icon: <Linkedin size={30} />, link: "https://www.linkedin.com/in/chathu-hewamaramage-1a4a4b1b9/" }
+                { icon: <Linkedin size={30} />, link: "https://www.linkedin.com/in/chathumi-hewamaramage-a65719267/" }
               ].map((social, index) => (
                 <a 
                   key={index}
