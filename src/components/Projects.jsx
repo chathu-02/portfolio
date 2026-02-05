@@ -7,9 +7,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const ProjectCard = ({ Project }) => {
-  const images = (Project.images && Project.images.length > 0 ? Project.images : [Project.image]).filter(Boolean);
-  const sliderImages = Project.id === 1 ? images : images.slice(0, 24);
+const ProjectCard = ({ Projects }) => {
+  const images = (Projects.images && Projects.images.length > 0 ? Projects.images : [Projects.image]).filter(Boolean);
+  const sliderImages = Projects.id === 1 ? images : images.slice(0, 24);
 
   return (
     <motion.div
@@ -34,7 +34,7 @@ const ProjectCard = ({ Project }) => {
               <SwiperSlide key={i} className="h-10 w-10 min-w-10 min-h-10">
                 <img
                   src={src}
-                  alt={`${Project.title} screenshot ${i + 1}`}
+                  alt={`${Projects.title} screenshot ${i + 1}`}
                   className="h-10 w-10 min-w-10 min-h-10 object-cover object-center"
                   loading="lazy"
                 />
@@ -55,10 +55,10 @@ const ProjectCard = ({ Project }) => {
       <div className="p-6 space-y-4">
         <div className="flex flex-col items-center gap-3 text-center">
           <h4 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-            {project.title}
+            {Projects.title}
           </h4>
           <div className="flex gap-4 justify-center">
-            <a href={Project.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href={Projects.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Github size={20} />
             </a>
             <a href={Projects.demo} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
@@ -68,11 +68,11 @@ const ProjectCard = ({ Project }) => {
         </div>
 
         <p className="text-gray-400 text-sm leading-relaxed min-h-[40px]">
-          {Project.description}
+          {Projects.description}
         </p>
         
         <div className="flex flex-wrap gap-6 pt-6">
-          {Project.tech.map((t, i) => (
+          {Projects.tech.map((t, i) => (
             <span key={i} className="text-[20px] uppercase font-bold tracking-wider bg-emerald-500/10 text-emerald-400 px-6 py-1 rounded-md border border-emerald-500/20">
               {t}
             </span>
@@ -116,8 +116,8 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map(Project => (
-            <ProjectCard key={Project.id} Project={Project} />
+          {projectsData.map(Projects => (
+            <ProjectCard key={Projects.id} Projects={Projects} />
           ))}
         </div>
       </div>
