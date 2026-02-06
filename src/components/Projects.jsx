@@ -35,7 +35,7 @@ const ProjectCard = ({ Projects }) => {
                 <img
                   src={src}
                   alt={`${Projects.title} screenshot ${i + 1}`}
-                  className="h-10 w-10 min-w-10 min-h-10 object-cover object-center"
+                  className="h-00 w-10 min-w-10 min-h-10 object-cover object-center"
                   loading="lazy"
                 />
               </SwiperSlide>
@@ -89,7 +89,7 @@ const Projects = () => {
       id: 1,
       title: "E-Commerce Platform",
       description: "A full-featured online store with payment integration and order tracking.A speciality is jawelery makers can say to the system they are availabe or not.using that status system is automatically assigned new oder to the available jawelery maker.",
-      tech: ["React", "Node.js", "MongoDB", "Tailwind","Express","Stripe","JWT","HTML/CSS"],
+      tech: ["React", "Node.js", "MongoDB", "Tailwind","Express","Stripe","JWT","HTML/CSS","Render"],
       github: "https://github.com/chathu-02/e-commerce-website",
       demo: "https://aura-gem-store-final.onrender.com/",
       images: ["/1.jpg", "/2.jpg", "/3.jpg","/4.jpg","/5.jpg", "/6.jpg", "/8.jpg", "/9.jpg", "/10.jpg", "/11.jpg", "/13.jpg", "/14.jpg", "/15.jpg", "/16.jpg", "/20.jpg", "/21.jpg", "/22.jpg"] 
@@ -101,6 +101,15 @@ const Projects = () => {
       tech: ["Kotlin", "Android SDK", "Figma"],
       github: "https://github.com/chathu-02/Personal-Wellness-App",
       images: ["/23.jpg", "/24.jpg","/25.jpg","/26.jpg","/27.jpg","/28.jpg","/29.jpg","/30.jpg","/31.jpg","/33.jpg","/34.jpg"]
+    },
+    {
+      id: 3,
+      title: "SmartBook-AI",
+      description: "An intelligent appointment booking platform that leverages AI to simplify user scheduling. Users can book appointments through a natural language interface, while administrators manage data via a secure, real-time dashboard.",
+      tech: ["Supabase", "PostgreSQL", "Next.js", "Tailwind CSS", "openAI API","Supabase Auth","Render"],
+      github: "https://github.com/chathu-02/SmartBook-AI",
+      demo: "https://smartbook-ai.onrender.com/",
+      images: ["/s1.jpg", "/s2.jpg","/s3.jpg"]
     }
   ];
 

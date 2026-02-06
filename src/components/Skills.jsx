@@ -4,9 +4,10 @@ import { Code2, Database, Palette, Smartphone } from 'lucide-react';
 const Skills = () => {
   const skills = [
     { name: "Frontend", icon: <Code2 size={24} />, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-    { name: "Backend", icon: <Database size={24} />, items: ["Node.js", "Express", "Python", "MongoDB"] },
+    { name: "Backend", icon: <Database size={24} />, items: ["Node.js", "Express", "Python", "MongoDB","Supbase"] },
     { name: "Design", icon: <Palette size={24} />, items: ["Figma", "UI/UX", "Responsive Design"] },
-    { name: "Mobile", icon: <Smartphone size={24} />, items: ["React Native","Android studio sdk"] }
+    { name: "Mobile", icon: <Smartphone size={24} />, items: ["React Native","Android studio sdk"] },
+    { name: "Live", icon: <Smartphone size={24} />, items: ["Render"] },
   ];
 
   return (

@@ -119,7 +119,7 @@ const Header = () => {
           {navItems.map((item, index) => (
             <motion.a
               key={item}
-              href={item === 'ABOUT' ? '#about-image' : `#${item.toLowerCase()}`}
+              href={item === 'ABOUT' ? '#about-image' : item === 'PROJECTS' ? '#Projects' : `#${item.toLowerCase()}`}
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
